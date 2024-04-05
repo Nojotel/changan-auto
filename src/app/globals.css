@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: #fff;
+}
+body {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}

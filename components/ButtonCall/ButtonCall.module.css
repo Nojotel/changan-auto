@@ -1,0 +1,31 @@
+.button {
+  width: 204px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: rgb(11, 69, 127);
+
+  color: rgb(251, 251, 251);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  border: 0;
+  transition: background-color 0.3s ease;
+  margin-left: 56px;
+}
+.button:hover {
+  background: rgb(0, 108, 216);
+}
+@media (max-width: 1349px) {
+  .button {
+    margin-left: auto;
+  }
+}
+@media (max-width: 599px) {
+  .button {
+    display: none;
+  }
+}

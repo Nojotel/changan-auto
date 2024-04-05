@@ -1,0 +1,120 @@
+.header {
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(251, 251, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+.logo {
+  width: 209px;
+  height: 26px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-left: auto;
+}
+.menuHidden {
+  display: none;
+}
+.menuItem {
+  list-style-type: none;
+  margin: 0 10px;
+}
+.line {
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgb(206, 206, 206);
+}
+.link {
+  color: rgb(102, 102, 102);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  text-align: center;
+  position: relative;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 2px;
+  border-radius: 100px;
+  width: 100%;
+  background-color: rgb(11, 69, 127);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.link.active::after,
+.link:hover::after {
+  transform: scaleX(1);
+}
+.container {
+  width: 100%;
+  max-width: 1300px;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.5px;
+  letter-spacing: 0px;
+  margin-right: 32px;
+}
+.icon {
+  margin-right: 8px;
+}
+.leftContainer {
+  display: flex;
+}
+@media (min-width: 1350px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .menuHidden {
+    display: flex;
+  }
+}
+@media (max-width: 1349px) {
+  .navigation {
+    justify-content: space-between;
+  }
+  .navigation {
+    max-width: 860px;
+  }
+  .container {
+    max-width: 860px;
+  }
+  .menu {
+    display: none;
+  }
+}
+@media (max-width: 899px) {
+  .container {
+    display: none;
+  }
+}

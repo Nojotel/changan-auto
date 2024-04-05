@@ -1,0 +1,50 @@
+.burgerButton {
+  width: 2rem;
+  height: 2rem;
+  z-index: 105;
+  display: none;
+  cursor: pointer;
+}
+
+.burgerButton div {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 3px;
+  background: rgb(11, 69, 127);
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+.burgerButton div:first-child {
+  transform: translateY(-8px);
+}
+
+.burgerButton div:first-child.open {
+  transform: translateY(0) rotate(45deg);
+}
+
+.burgerButton div:nth-child(2) {
+  transform: translateY(0);
+}
+
+.burgerButton div:nth-child(2).open {
+  opacity: 0;
+}
+
+.burgerButton div:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.burgerButton div:nth-child(3).open {
+  transform: translateY(0) rotate(-45deg);
+}
+
+@media (max-width: 1349px) {
+  .burgerButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+}
